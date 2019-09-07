@@ -1,7 +1,16 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount, render, configure } from 'enzyme';
+import { expect } from 'chai';
+import Adapter from 'enzyme-adapter-react-16';
 
-import Foo from './Game';
+configure({ adapter: new Adapter() });
+
+
+ import Game from './Game';
+
+ it('should render without throwing an error', function() {
+       
+});
 
 // describe('A suite', function() {
 //   it('should render without throwing an error', function() {

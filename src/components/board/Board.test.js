@@ -1,7 +1,16 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount, render, configure } from 'enzyme';
+import { expect } from 'chai';
+import Adapter from 'enzyme-adapter-react-16';
 
-import Foo from './board';
+configure({ adapter: new Adapter() });
+
+import Board from './Board';
+
+it('should render without throwing an error', function() {
+       
+      });
+
 
 // describe('A suite', function() {
 //   it('should render without throwing an error', function() {
