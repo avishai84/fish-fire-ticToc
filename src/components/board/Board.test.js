@@ -7,9 +7,13 @@ configure({ adapter: new Adapter() });
 
 import Board from './Board';
 
-it('should render without throwing an error', function() {
-       
-      });
+
+describe('Board ', function() {
+    it('has a class of square', function() {
+        const wrapper = shallow(<Boare/>);
+      expect(wrapper.find('.board')).to.have.lengthOf(0);
+    });
+  });
 
 
 // describe('A suite', function() {

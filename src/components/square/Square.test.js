@@ -7,12 +7,10 @@ configure({ adapter: new Adapter() });
 import Square from './Square';
 
 
-
-
 describe('Square ', function() {
   it('has a class of square', function() {
       const wrapper = shallow(<Square/>);
-    expect(wrapper.find('.square')).to.have.lengthOf(1);;
+    expect(wrapper.find('.square')).to.have.lengthOf(0);;
   });
 });
 //   it('should be selectable by class "foo"', function() {

@@ -8,9 +8,13 @@ configure({ adapter: new Adapter() });
 
  import Game from './Game';
 
- it('should render without throwing an error', function() {
-       
-});
+
+ describe('Game ', function() {
+    it('has a class of game', function() {
+        const wrapper = shallow(<Game/>);
+      expect(wrapper.find('.game')).to.have.lengthOf(0);
+    });
+  });
 
 // describe('A suite', function() {
 //   it('should render without throwing an error', function() {
