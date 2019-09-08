@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 function Square() {
   return (
-    <div className="square">
+    <div className="square" >
         <div className="row">
             <button id="btn_0">square</button>
             <button id="btn_1">square</button>
