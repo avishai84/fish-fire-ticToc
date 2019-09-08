@@ -12,7 +12,7 @@ configure({ adapter: new Adapter() });
  describe('Game ', function() {
     it('has a class of game', function() {
         const wrapper = shallow(<Game/>);
-      expect(wrapper.find('.game')).to.have.lengthOf(0);
+      expect(wrapper.find('.game')).to.have.lengthOf(1);
     });
   });
 

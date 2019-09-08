@@ -4,7 +4,7 @@ import Square from '../square/Square';
 function Board() {
   return (
     <div className="board">
-         <p>Boared</p>
+         <p>Board</p>
         <Square />
     </div>
   );

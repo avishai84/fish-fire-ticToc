@@ -10,12 +10,36 @@ import Square from './Square';
 describe('Square ', function() {
   it('has a class of square', function() {
       const wrapper = shallow(<Square/>);
-    expect(wrapper.find('.square')).to.have.lengthOf(0);;
+    expect(wrapper.find('.square')).to.have.lengthOf(1);
   });
 });
-//   it('should be selectable by class "foo"', function() {
-//     expect(shallow(<Foo />).is('.foo')).toBe(true);
-//   });
+
+describe('button ', function() {
+  it('should have a button element' , function() {
+    const wrapper = shallow(<Square></Square>);
+    expect(wrapper.find('.square').find('button').children()).to.have.lengthOf(9);
+  });
+});
+
+
+describe('button element has ID', function() {
+    it('should have a total of nine IDs' , function() {
+      const wrapper = shallow(<Square></Square>);
+          expect(wrapper.find('button')).to.have.lengthOf(9);
+    });
+  });
+
+
+describe('button element has ID', function() {
+    it('should have each an ID' , function() {
+      const wrapper = shallow(<Square></Square>);
+      const btns = wrapper.find('button').length;
+      console.log(btns);
+      wrapper.find('button').forEach((node, index) => {
+          expect(node.find(`#btn_${index}`)).to.have.lengthOf(1);
+      });
+    });
+  });
 
 //   it('should mount in a full DOM', function() {
 //     expect(mount(<Foo />).find('.foo').length).toBe(1);

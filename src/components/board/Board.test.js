@@ -10,8 +10,8 @@ import Board from './Board';
 
 describe('Board ', function() {
     it('has a class of square', function() {
-        const wrapper = shallow(<Boare/>);
-      expect(wrapper.find('.board')).to.have.lengthOf(0);
+        const wrapper = shallow(<Board/>);
+      expect(wrapper.find('.board')).to.have.lengthOf(1);
     });
   });
 
