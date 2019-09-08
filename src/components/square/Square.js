@@ -1,9 +1,10 @@
 import React from 'react';
 
+const hello = function(){};
 
 function Square() {
   return (
-    <div className="square" >
+    <div className="square" onClick={hello}>
         <div className="row">
             <button id="btn_0">square</button>
             <button id="btn_1">square</button>

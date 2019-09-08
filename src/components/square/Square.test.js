@@ -42,24 +42,8 @@ describe('button element has ID', function() {
 
 
   describe('check if square has onClick properties', function() {
-    it('should have onClick prop' , function() {
-      const wrapper = shallow(<Square className="square"></Square>);
-    //   const propsOnlick = wrapper.props().toEqual('onClick');
-    //   console.log(propsOnlick);
-    //   console.log(wrapper.debug());
-      expect(wrapper.props().onClick).to.equal(true);
-
-    //   const btns = wrapper.find('button').length;
-    //   wrapper.find('button').forEach((node, index) => {
-    //       expect(node.find(`#btn_${index}`)).to.have.lengthOf(1);
-    //   });
+    it('should have onClick prop' ,function() {
+      const wrapper = shallow(<Square className="square" onClick></Square>);
+      expect('onClick' in wrapper.props()).to.equal(true);
     });
   });
-//   it('should mount in a full DOM', function() {
-//     expect(mount(<Foo />).find('.foo').length).toBe(1);
-//   });
-
-//   it('should render to static HTML', function() {
-//     expect(render(<Foo />).text()).toEqual('Bar');
-//   });
-// });
