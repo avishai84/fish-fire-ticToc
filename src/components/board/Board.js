@@ -4,10 +4,12 @@ import Square from '../square/Square';
 
 class Board extends Component{
     render(){
-        return (<div className="board">
-        <p>Board</p>
-       <Square />
-       </div>);
+        return (
+        <div className="board">
+            <p>Board</p>
+            <Square square={this.props.square}/>
+        </div>
+        );
     }
 }
 

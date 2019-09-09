@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow, mount, render, configure } from 'enzyme';
 import { expect } from 'chai';
 import Adapter from 'enzyme-adapter-react-16';
+import Board from './Board';
 
 configure({ adapter: new Adapter() });
 
-import Board from './Board';
 
 
 describe('Board ', function() {
@@ -18,8 +18,10 @@ describe('Board ', function() {
 
 describe('Borad recieve props square', function() {
   it('will check if prop squares exists', function() {
-    const wrapper = shallow(<Board/>);
-    expect(wrapper.props().square.length).to.equal(1);
+    const wrapper = shallow(<Board square={'square'}/>);
+    console.log(wrapper.find('Square').props());
+    expect(wrapper.find('Square').props().square).to.equal('square');
+    //expect(wrapper.props().square).to.equal('square');
   });
 });
 //   it('should be selectable by class "foo"', function() {
