@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
 import Square from '../square/Square';
 
-function Board() {
-  return (
-    <div className="board">
-         <p>Board</p>
-        <Square />
-    </div>
-  );
+
+class Board extends Component{
+    render(){
+        return (<div className="board">
+        <p>Board</p>
+       <Square />
+       </div>);
+    }
 }
 
 export default Board;

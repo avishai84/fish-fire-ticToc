@@ -16,10 +16,11 @@ describe('Board ', function() {
   });
 
 
-// describe('A suite', function() {
-//   it('should render without throwing an error', function() {
-//     expect(shallow(<Foo />).contains(<div className="foo">Bar</div>)).toBe(true);
-//   });
+describe('Borad recieve props square', function() {
+  it('will check for props squares', function() {
+    const wrapper = shallow(<Board/>);
+    expect(wrapper.props().square.length).to.equal(1);
+  });
 
 //   it('should be selectable by class "foo"', function() {
 //     expect(shallow(<Foo />).is('.foo')).toBe(true);

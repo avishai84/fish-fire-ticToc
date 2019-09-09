@@ -7,3 +7,7 @@
   height: 40vmin;
   min-height: 100vh;
 }
+button {
+  padding:1rem;
+  box-shadow: 2px 2px 7px grey;
+}
