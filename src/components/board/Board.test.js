@@ -17,11 +17,11 @@ describe('Board ', function() {
 
 
 describe('Borad recieve props square', function() {
-  it('will check for props squares', function() {
+  it('will check if prop squares exists', function() {
     const wrapper = shallow(<Board/>);
     expect(wrapper.props().square.length).to.equal(1);
   });
-
+});
 //   it('should be selectable by class "foo"', function() {
 //     expect(shallow(<Foo />).is('.foo')).toBe(true);
 //   });
@@ -34,3 +34,4 @@ describe('Borad recieve props square', function() {
 //     expect(render(<Foo />).text()).toEqual('Bar');
 //   });
 // });
+// 
