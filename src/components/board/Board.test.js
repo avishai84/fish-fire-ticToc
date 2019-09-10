@@ -26,6 +26,6 @@ describe('Borad recieve props square', function() {
 
 it('will get array of nine nulls', function() {
     const wrapper = shallow(<Board />);
-    expect(wrapper.state('squares').length).to.equal(0);
+    expect(wrapper.state('squares').length).to.equal(9);
   });
 
