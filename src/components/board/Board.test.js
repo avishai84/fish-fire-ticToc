@@ -19,21 +19,13 @@ describe('Board ', function() {
 describe('Borad recieve props square', function() {
   it('will check if prop squares exists', function() {
     const wrapper = shallow(<Board square={'square'}/>);
-    console.log(wrapper.find('Square').props());
     expect(wrapper.find('Square').props().square).to.equal('square');
-    //expect(wrapper.props().square).to.equal('square');
   });
 });
-//   it('should be selectable by class "foo"', function() {
-//     expect(shallow(<Foo />).is('.foo')).toBe(true);
-//   });
 
-//   it('should mount in a full DOM', function() {
-//     expect(mount(<Foo />).find('.foo').length).toBe(1);
-//   });
 
-//   it('should render to static HTML', function() {
-//     expect(render(<Foo />).text()).toEqual('Bar');
-//   });
-// });
-// 
+it('will get array of nine nulls', function() {
+    const wrapper = shallow(<Board />);
+    expect(wrapper.state('squares').length).to.equal(0);
+  });
+
