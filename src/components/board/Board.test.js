@@ -32,6 +32,6 @@ it('will get array length equals to nine ', function() {
   it('should have whosNext prop' , function() {
     const wrapper = shallow(<Board></Board>);
     console.log(wrapper.debug());
-    expect(wrapper.find('Board').props().whosNext).length.to.equal(1);
+    expect(wrapper.state().whosNext).to.equal(true);
     });
 
