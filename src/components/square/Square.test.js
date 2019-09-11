@@ -52,6 +52,7 @@ describe('button element has ID', function() {
       var value = 'clicked';
       return valueFromClick = value;
   }
+
   let valueFromClick = '';
   describe('simulate onClick ', function() {
     it('should call mock function when button is clicked' ,function() {

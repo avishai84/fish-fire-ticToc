@@ -18,14 +18,20 @@ describe('Board ', function() {
 
 describe('Borad recieve props square', function() {
   it('will check if prop squares exists', function() {
-    const wrapper = shallow(<Board square={'square'}/>);
-    expect(wrapper.find('Square').props().square).to.equal('square');
+    const wrapper = shallow(<Board/>);
+    expect(wrapper.find('Square').props().square.length).to.equal(9);
   });
 });
 
 
-it('will get array of nine nulls', function() {
+it('will get array length equals to nine ', function() {
     const wrapper = shallow(<Board />);
     expect(wrapper.state('squares').length).to.equal(9);
   });
+
+  it('should have whosNext prop' , function() {
+    const wrapper = shallow(<Board></Board>);
+    console.log(wrapper.debug());
+    expect(wrapper.find('Board').props().whosNext).length.to.equal(1);
+    });
 

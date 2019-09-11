@@ -6,7 +6,8 @@ class Board extends Component{
     constructor(props) {
         super(props);
         this.state = {
-          squares: Array(9).fill(null)
+          squares: Array(9).fill(null),
+          whosNext: true
         };
       }
 
@@ -14,7 +15,7 @@ class Board extends Component{
         return (
         <div className="board">
             <p>Board</p>
-            <Square square={this.props.square}/>
+            <Square square={this.state.squares} whosNext={this.state.whosNext}/>
         </div>
         );
     }
