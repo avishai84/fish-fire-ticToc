@@ -9,13 +9,22 @@ class Board extends Component{
           squares: Array(9).fill(null),
           whosNext: true
         };
+        this.handleClick = this.handleClick.bind(this);
+      }
+
+      handleClick(e){
+          this.setState({
+            whosNext: !this.state.whosNext
+          })
       }
 
     render(){
+        const nextPlayer = this.state.whosNext ? 'X' : 'O';
         return (
         <div className="board">
             <p>Board</p>
-            <Square square={this.state.squares} whosNext={this.state.whosNext}/>
+            <p>Next player is: {nextPlayer}</p>
+            <Square onClick={this.handleClick} square={this.state.squares} whosNext={this.state.whosNext}/>
         </div>
         );
     }
