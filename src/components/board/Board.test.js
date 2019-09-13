@@ -41,6 +41,12 @@ it('will get array length equals to nine ', function() {
 
     it('will test whosNext state to be true' , function() {
         const wrapper = shallow(<Board></Board>);
-        console.log(wrapper.state());
+        //console.log(wrapper.state());
         expect(wrapper.state('whosNext')).to.equal(true);
+    });
+
+    it('will test if whosNext state change from true to false on click' , function() {
+        const wrapper = shallow(<Board></Board>);
+        wrapper.find('Square').simulate('click');
+        expect(wrapper.state('whosNext')).to.equal(false);
     });
