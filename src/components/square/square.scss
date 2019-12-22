@@ -1,0 +1,35 @@
+
+
+.parentSquare{
+    background-color: #282c34;
+    .square {
+        position: relative;
+        .gameOver {
+    
+            h3.hide {
+                position: absolute;
+                top: -8%;
+                left: -5000em;
+                width: 0;
+                height: 0;
+        
+          }
+          h3.disabled {
+            position: absolute;
+            top: -8%;
+            left: 25%;
+            width: 50%;
+            height: 108%;
+            background-color: rgba(4,4,4,.5);
+          }
+      }
+        .rowsBtn{
+            .row {
+                background-color: #282c34;
+            }
+        }
+    }
+    .history{
+        background-color: #282c34;
+    }
+}

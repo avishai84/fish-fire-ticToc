@@ -49,7 +49,7 @@ describe('button element has ID', function() {
   });
 
   const mockFunction = function(){
-      var value = 'clicked';
+      var value = 'I was clicked';
       return valueFromClick = value;
   }
 
@@ -58,6 +58,6 @@ describe('button element has ID', function() {
     it('should call mock function when button is clicked' ,function() {
       const wrapper = shallow(<Square className="square" onClick={mockFunction}></Square>);
       wrapper.simulate('click');
-      expect(valueFromClick).to.equal('clicked');
+      expect(valueFromClick).to.equal('I was clicked');
     });
   });
