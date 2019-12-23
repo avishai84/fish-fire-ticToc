@@ -2,6 +2,9 @@
 
 <img src="https://live.staticflickr.com/65535/49260411528_825bef1865.jpg" width="500" height="424" alt="tic toc game" />
 
+### `Game rules,`
+### `You are 🔥, your friend is 🐟. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over.`
+
 
 ## Available Scripts
 
