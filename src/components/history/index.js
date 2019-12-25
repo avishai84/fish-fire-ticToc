@@ -20,7 +20,9 @@ class History extends Component {
         // add new array to each button,
         // set flags to new content
        const historyArray = [...this.props.history];
+       console.table(historyArray);
         console.log(historyArray.length);
+        console.table(btns)
        const prevHistory = historyArray.length - 1;
        console.log('prevHistory ', prevHistory);
 
@@ -33,6 +35,11 @@ class History extends Component {
                     elem.innerHTML = '';
                 }
             }
+              this.setState((prevProps, prevState) => {
+                    if(prevProps.history !== prevState.history){
+                        console.log('hi');
+                    }   
+              });
         });
 
         // props.square.forEach((prevBoard, i) => {

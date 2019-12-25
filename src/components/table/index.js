@@ -1,7 +1,7 @@
 import React ,{Component} from 'react';
 import '../table/table.scss';
 
-let number = 0;
+let round = 0;
 let leftWin = 0;
 let rightWin = 0;
 
@@ -60,16 +60,18 @@ class Table extends Component {
 
     if(winner !== null){
         if(winner === '🐟'){
-            number = number + 1;
+            round = round + 1;
            // sides(winner);
         }else if( winner === '🔥' ){
-            number = number + 1;
+            round = round + 1;
+        }else{
+            round = round + 1;
         }
     }
 
     return (
         <div className="table" onChange={this.determindWinner(this.props.winnerIs)}>
-            <h5>Round{number > 1 ? 's' : ''}: {number}</h5>
+            <h5>Round{round > 1 ? 's' : ''}: {round}</h5>
             <ul className="wrapperRound">
                 <ul className="left">
                     <li><span role="img" aria-labelledby="fish">🐟</span></li>
