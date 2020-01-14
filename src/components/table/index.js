@@ -1,4 +1,5 @@
 import React ,{Component} from 'react';
+import Players from '../players';
 import '../table/table.scss';
 
 let round = 0;
@@ -71,8 +72,10 @@ class Table extends Component {
 
     return (
         <div className="table" onChange={this.determindWinner(this.props.winnerIs)}>
+           
             <h5>Round{round > 1 ? 's' : ''}: {round}</h5>
             <ul className="wrapperRound">
+            <Players name="player1"/>
                 <ul className="left">
                     <li><span role="img" aria-labelledby="fish">🐟</span></li>
                     <li>{leftWin}</li>
@@ -81,7 +84,9 @@ class Table extends Component {
                     <li><span role="img" aria-labelledby="fire">🔥</span></li>
                     <li>{rightWin}</li>
                 </ul>
+                <Players name="player2"/>
             </ul>
+           
         </div>
         );
     }

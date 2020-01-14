@@ -26,6 +26,14 @@
         .rowsBtn{
             .row {
                 background-color: #282c34;
+                button.hover_fire:before {
+                    content:'🔥';
+                    opacity: 0.5;
+                }
+                button.hover_fish:before {  
+                    content:'🐟';
+                    opacity: 0.5;  
+                }
             }
         }
     }

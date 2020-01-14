@@ -5,7 +5,7 @@ function Header(){
 
     return(
         <header className="header">
-            <h1>Fish & Fire Tic Toc Game</h1>
+            <h1>Fish & Fire Tic Tac Game</h1>
         </header>
     );
 
