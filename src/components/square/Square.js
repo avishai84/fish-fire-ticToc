@@ -12,7 +12,8 @@ class Square extends Component {
       history: this.props.history,
       square: this.props.square,
       reset: this.props.reset,
-      style_icon : 'hover_fish'
+      style_icon : 'hover_fish',
+    
     }
     this.setIsShown = this.setIsShown.bind(this);
   }
@@ -152,9 +153,7 @@ class Square extends Component {
         </div>
           
       </div>
-        <History history={this.props.history}
-       
-         />
+        <History history={this.props.history}/>
       </div>
 
     );

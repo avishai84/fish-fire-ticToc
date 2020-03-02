@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component, Fragment, useContext} from 'react';
 import Square from '../square/Square';
 import Table from '../table';
 let historyArray = [];
@@ -13,6 +13,7 @@ class Board extends Component{
           winnerIs : false,
           win : false,
           reset: false
+       
         };
         this.handleClick = this.handleClick.bind(this);
         this.reset = this.reset.bind(this);
@@ -95,11 +96,10 @@ class Board extends Component{
         const reset = (winnerIs === '🐟' ||  winnerIs  === '🔥' || winnerIs === 'a tie!') ? <button className="reset" onClick={this.reset}>New Game</button> : '';
           //e.target.className = 'flagged';
         // const gameOver = (winnerIs) => (winnerIs === '🐟' ||  winnerIs  === '🔥' || winnerIs === 'a tie!') ? 'over': '';
-
-
+ 
         return (
         <div className='board'>
-        <div><Table winnerIs={winnerIs}/></div>
+          <div><Table winnerIs={winnerIs}/></div>
           <Fragment>{reset}</Fragment>
            {(winnerIs === '🐟' || winnerIs === '🔥')  && `Winner is: ${winnerIs}`} 
             <p className="nextPlayer">{!winnerIs && `Next player is: ${nextPlayer}`}</p>
@@ -111,6 +111,7 @@ class Board extends Component{
               whosNext={this.state.whosNext}
               history={this.state.history}
               reset={this.state.reset}
+              name={this.props.name}
                />
         </div>
         );
